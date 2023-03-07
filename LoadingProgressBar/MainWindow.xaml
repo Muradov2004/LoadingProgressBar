@@ -1,0 +1,27 @@
+﻿<Window x:Class="LoadingProgressBar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoadingProgressBar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="800" ResizeMode="CanMinimize">
+    <Grid Background="AntiqueWhite">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox Grid.Column="0" Width="30" Height="20" Margin="0,0,0,150" MaxLength="2" TextAlignment="Right" Text="1" PreviewTextInput="NumberValidationTextBox" Name="txtBoxMinus"/>
+        <Button Grid.Column="0" Width="100" Height="100" Click="ButtonMinus_Click">
+            <Image Source="/Images/minus.png" Width="90" Height="90"/>
+        </Button>
+        <ProgressBar Grid.Column="1" Height="100" Value="0" Name="progressBar"/>
+        <TextBox Grid.Column="2" Width="30" Height="20" Margin="0,0,0,150" MaxLength="2" TextAlignment="Right" Text="1" PreviewTextInput="NumberValidationTextBox" Name="txtBoxPlus"/>
+        <Button Grid.Column="2" Width="100" Height="100" Click="ButtonPlus_Click">
+            <Image Source="/Images/plus.png" Width="90" Height="90"/>
+        </Button>
+
+
+    </Grid>
+</Window>
